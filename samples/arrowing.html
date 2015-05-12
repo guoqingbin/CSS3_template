@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .content{
+            position: absolute;
+            top: 200px;
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+        }
+        .l{
+            left: 600px;
+            background: #007aff;
+        }
+        .r{
+            left: 1000px;
+            background: coral;
+        }
+        .arrowing {
+            animation-name: arrowing;
+            -webkit-animation-name: arrowing;
+            animation-duration: 1.5s;
+            -webkit-animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            -webkit-animation-iteration-count: infinite;
+        }
+        @keyframes arrowing {
+            0% {
+                transform: translateY(-5px);
+                opacity: 0.8;
+            }
+            50% {
+                transform: translateY(10px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-5px);
+                opacity: 0.8;
+            }
+        }
+
+        @-webkit-keyframes arrowing {
+            0% {
+                -webkit-transform: translateY(-5px);
+                opacity: 0.8;
+            }
+            50% {
+                -webkit-transform: translateY(10px);
+                opacity: 1;
+            }
+            100% {
+                -webkit-transform: translateY(-5px);
+                opacity: 0.8;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content l"></div>
+    <div class="content r arrowing"></div>
+</body>
+</html>

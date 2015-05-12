@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background: #808080;
+        }
+        .content{
+            position: absolute;
+            top: 200px;
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .l{
+            left: 600px;
+            background: none repeat scroll 0 0 rgb(255, 255, 255);
+        }
+        .r{
+            left: 1000px;
+            background: coral;
+        }
+        .flipInY {
+            -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+            -webkit-animation-name: flipInY;
+            animation-name: flipInY;
+        }
+        @-webkit-keyframes flipInY {
+            0% {
+                -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+                transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+                -webkit-transition-timing-function: ease-in;
+                transition-timing-function: ease-in;
+                opacity: 0;
+            }
+            40% {
+                -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+                transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+                -webkit-transition-timing-function: ease-in;
+                transition-timing-function: ease-in;
+            }
+            60% {
+                -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+                transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+                opacity: 1;
+            }
+            80% {
+                -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+                transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+            }
+            100% {
+                -webkit-transform: perspective(400px);
+                transform: perspective(400px);
+            }
+        }
+
+        @keyframes flipInY {
+            0% {
+                -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+                transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+                -webkit-transition-timing-function: ease-in;
+                transition-timing-function: ease-in;
+                opacity: 0;
+            }
+            40% {
+                -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+                transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+                -webkit-transition-timing-function: ease-in;
+                transition-timing-function: ease-in;
+            }
+            60% {
+                -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+                transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+                opacity: 1;
+            }
+            80% {
+                -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+                transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+            }
+            100% {
+                -webkit-transform: perspective(400px);
+                transform: perspective(400px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content l">
+        <div class="flipInY"></div>
+    </div>
+    <div class="content r"></div>
+</body>
+</html>
