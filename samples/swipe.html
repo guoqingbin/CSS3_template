@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="../css_src/bootstrap.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="../css_src/test.css">
+
+    <!-- Demo styles -->
+    <style>
+    html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    #tools{
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 50px;
+        width: 400px;
+        height: 600px;
+        border: 2px dashed red;
+        border-radius: 10px;
+    }
+    .words{
+        margin: 0 auto;
+        font-size: 2em;
+        text-align: center;
+        height: 100px;
+        width: 100px;
+        background: #ffffff;
+        border-radius: 15px;
+    }
+    .swiper-container {
+        width: 400px;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: rosybrown;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    </style>
+</head>
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><span class="words">Slide 1</span></div>
+            <div class="swiper-slide" style="background: rosybrown"><span class="words">Slide 2</span></div>
+            <div class="swiper-slide" style="background: red"><span class="words">Slide 3</span></div>
+            <div class="swiper-slide" style="background: darkgoldenrod"><span class="words">Slide 4</span></div>
+            <div class="swiper-slide" style="background: silver"><span class="words">Slide 5</span></div>
+            <div class="swiper-slide" style="background: tomato"><span class="words">Slide 6</span></div>
+            <div class="swiper-slide" style="background: gold"><span class="words">Slide 7</span></div>
+            <div class="swiper-slide" style="background: royalblue"><span class="words">Slide 8</span></div>
+            <div class="swiper-slide" style="background: brown"><span class="words">Slide 9</span></div>
+            <div class="swiper-slide" style="background: navy"><span class="words">Slide 10</span></div>
+        </div>
+        <!--&lt;!&ndash; Add Pagination &ndash;&gt;-->
+        <!--<div class="swiper-pagination"></div>-->
+    </div>
+
+    <div id="tools">
+        <button type="button" class="btn btn-success" onclick="addSlidePage();">增加页面</button>
+        <button type="button" class="btn btn-success" onclick="changeAni();">自定义</button>
+        <select id="selects">
+            <option value="arrowing">上下浮动</option>
+            <option value="flipInY">翻滚</option>
+            <option value="moveLeft">左移</option>
+            <option value="pullDown">下拉</option>
+            <option value="zoomIn">放大</option>
+        </select>
+        <div>
+            <label for="ani_duration">时间</label>
+            <input type="range" min="1" max="10" id="ani_duration">
+        </div>
+
+
+    </div>
+
+    <script src="./js/jquery-2.1.4.js"></script>
+    <script src="./js/css-animations.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <!-- Swiper JS -->
+    <script src="./js/swiper.js"></script>
+
+    <script src="./js/sw.js"></script>
+</body>
+</html>

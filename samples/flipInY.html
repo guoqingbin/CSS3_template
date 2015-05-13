@@ -29,6 +29,8 @@
             backface-visibility: visible;
             -webkit-animation-name: flipInY;
             animation-name: flipInY;
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
         }
         @-webkit-keyframes flipInY {
             0% {
@@ -91,9 +93,7 @@
     </style>
 </head>
 <body>
-    <div class="content l">
-        <div class="flipInY"></div>
-    </div>
+    <div class="content l flipInY"></div>
     <div class="content r"></div>
 </body>
 </html>

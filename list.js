@@ -5,4 +5,7 @@ list = {
 	'pullDown' : 'pullDown.html',
 	'flipInY' : 'flipInY.html',
 	'zoomIn' : 'zoomIn.html',
+	'moveLeft': 'moveLeft.html',
+	'swiper': 'swiper.html',
+	'fadeIn': 'fadeIn.html'
 };
